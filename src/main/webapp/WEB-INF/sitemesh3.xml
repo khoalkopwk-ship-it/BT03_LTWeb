@@ -1,0 +1,22 @@
+<sitemesh>
+    <!-- Tomcat 11 unwraps forward() response wrappers; include mode preserves SiteMesh buffering. -->
+    <dispatch-mode>include</dispatch-mode>
+    <decorator-prefix>/decorators/</decorator-prefix>
+
+    <mapping path="/home" decorator="main.jsp"/>
+    <mapping path="/product" decorator="main.jsp"/>
+    <mapping path="/product-detail" decorator="main.jsp"/>
+    <mapping path="/admin/*" decorator="admin.jsp"/>
+
+    <mapping path="/login" exclude="true"/>
+    <mapping path="/register" exclude="true"/>
+    <mapping path="/verify-otp" exclude="true"/>
+    <mapping path="/forgot-password" exclude="true"/>
+    <mapping path="/verify-forgot-otp" exclude="true"/>
+    <mapping path="/reset-password" exclude="true"/>
+    <mapping path="/css/*" exclude="true"/>
+    <mapping path="/js/*" exclude="true"/>
+    <mapping path="/images/*" exclude="true"/>
+    <mapping path="/uploads/*" exclude="true"/>
+    <mapping path="/profile" decorator="/views/decorators/main.jsp"/>
+</sitemesh>
